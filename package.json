@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@highlightjs/vue-plugin": "^2.1.0",
-    "highlight.js": "^11.9.0",
     "pinia": "^2.1.7",
     "primevue": "^3.44.0",
     "simple-syntax-highlighter": "^3.0.2",

@@ -11,7 +11,7 @@ import { useFileStore } from "@/store/readFile";
 import Textarea from 'primevue/textarea';
 const fileStore = useFileStore();
 const fileReader = new FileReader();
-const text = ref('');
+const text = ref('var x = 6;');
 // 监听当前选中文件
 watch(
 	() =>  fileStore.file,

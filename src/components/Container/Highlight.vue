@@ -3,9 +3,9 @@
     :label="options.label"
     :language="options.language"
     :dark="options.dark"
-		:editable="options.editable"
-		:tab="options.tab"
-    copyButton="options.copyButton"
+    :editable="options.editable"
+    :tab="options.tab"
+    :copy-button="options.copyButton"
     @copied="onCopiedDoSomething"
   >
     {{ code }}
@@ -17,7 +17,7 @@
 <script setup lang="ts">
 import SshPre from "simple-syntax-highlighter";
 import "simple-syntax-highlighter/dist/sshpre.css";
-import { ref, reactive } from "vue";
+import { ref, reactive, watch } from "vue";
 import Toast from "primevue/toast";
 import { useToast } from "primevue/usetoast";
 const toast = useToast();
@@ -27,16 +27,12 @@ const options = reactive({
   label: "Javascript",
   dark: true,
   copyButton: true,
-	editable:true,
-	tab: ' '
-
+  editable: true,
+  tab: " ",
 });
 
 const props = defineProps({
-  code: {
-    type: String,
-    default: "var x = 6;",
-  },
+  code:  ""
 });
 
 const onCopiedDoSomething = () => {

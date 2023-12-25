@@ -18,11 +18,10 @@ import Button from "primevue/button";
 import Tree from "primevue/tree";
 import { useFileStore } from "@/store/readFile";
 const fileStore = useFileStore();
-console.log("🚀 ~ file: index.vue:21 ~ fileStore:", fileStore)
+
 const nodes = ref(null);
 
 const open = async () => {
-  console.log("open");
   // 打开文件或文件夹
   pickDirectory();
 };
