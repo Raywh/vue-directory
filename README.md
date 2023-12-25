@@ -1,9 +1,9 @@
-# 模仿vscode，实现web端项目管理
+# Imitate vscode and implement web-based project management
 
-# 一期
-	打开项目
+# Phase I
+	Open Project
 
-## feature
-	1.关联git
-	2.插件
-	3.ai工具
+## Feature
+	1. Associate Git
+	2. Plugins
+	3. AI tools
