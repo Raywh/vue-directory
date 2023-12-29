@@ -7,6 +7,7 @@
     :tab="options.tab"
     :copy-button="options.copyButton"
     @copied="onCopiedDoSomething"
+		class="h-full"
   >
     {{ code }}
   </ssh-pre>
@@ -27,7 +28,7 @@ const options = reactive({
   label: "Javascript",
   dark: true,
   copyButton: true,
-  editable: true,
+  editable: false,
   tab: " ",
 });
 
@@ -46,4 +47,12 @@ const onCopiedDoSomething = () => {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="scss" scoped>
+.h-full {
+	overflow: auto;
+	height: 100vh;
+	margin-top: 0;
+	/* 滚动条样式 */
+	overflow-y: scroll;
+}
+</style>

@@ -7,6 +7,7 @@
       :value="nodes"
       selectionMode="single"
       :metaKeySelection="false"
+			class="tree"
       @nodeSelect="onNodeSelect"
     ></Tree>
   </div>
@@ -88,11 +89,16 @@ const onNodeSelect = async (node) => {
 
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .left-menu {
   width: 300px;
-  height: 100vh;
+	overflow: auto;
   border-right: 1px solid #ccc;
   padding: 10px;
+}
+.tree {
+	overflow: auto;
+	height: calc(100vh - 70px);
+	margin-top: 10px;
 }
 </style>
